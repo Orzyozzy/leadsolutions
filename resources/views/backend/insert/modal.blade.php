@@ -3,11 +3,11 @@
 <section class="content-header">
   <h1>
     Dashboard
-    <small>Add New Posts</small>
+    <small>Add New Service</small>
   </h1>
   <ol class="breadcrumb">
     <li><a href="{{url('admin')}}"><i class="fa fa-dashboard"></i> Home</a></li>
-    <li class="active">Add New Posts</li>
+    <li class="active">Add New Service</li>
   </ol>
 </section>
 
@@ -24,9 +24,9 @@
 
 	
 		<div class="col-sm-12">
-		  <form method="post" action="{{url('addButtons')}}" enctype="multipart/form-data">
+		  <form method="post" action="{{url('addService')}}" enctype="multipart/form-data">
 		  	{{ csrf_field() }}
-		  	<input type="hidden" name="tbl" value="{{encrypt('buttons')}}">
+		  	<input type="hidden" name="tbl" value="{{encrypt('services')}}">
 		  
 		  	<div class="form-group">
 		  		<label>Title</label>
@@ -36,17 +36,9 @@
 		  		<label>Description</label>
 		  		<textarea name="description" class="form-control" rows="10"></textarea>
               </div>
-             
               <div class="form-group">
-                <label>Category</label>
-                <select class="form-control" name="category">
-                    @foreach($cats as $cat)
-                <option>{{$cat->title}}</option>
-                @endforeach
-          
-
-               
-          </select>
+                <label>Icon</label>
+                <input type="text" name="icon" class="form-control">
               </div>
               
               <div class="form-group">
@@ -60,20 +52,13 @@
               </div>
 
 			<div class="form-group">
-				<button class="btn btn-success">Add Post</button>
+				<button class="btn btn-success">Add Service</button>
 			</div>
 		  </form>
 		</div>
 	
 	</div>
 </section>
-<script>
-var loadFile = function(event) {
-	var image = document.getElementById('output');
-	image.src = URL.createObjectURL(event.target.files[0]);
-};
-</script>
-
 <script src="{{url('resources/views/backend/ckeditor/ckeditor.js')}}"></script>
 <script>
     CKEDITOR.replace('description',{});

@@ -8,8 +8,6 @@ use DB;
 
 class adminController extends Controller
 {
-    public function __construct(){
-    }
 
     public function admin(){
         return view ('backend.index');
@@ -106,6 +104,22 @@ class adminController extends Controller
     public function allmembers(){
         $data = DB::table('teams')->get();
         return view ('backend.display.team',['data'=>$data]);
+    }
+
+    public function allmodals(){
+        $data = DB::table('services')->get();
+        return view('backend.insert.modal', ['data'=>$data]);
+    }
+
+    public function editproduct($id){
+        $cats = DB::table('products')->where('status','on')->get();
+        $data = DB::table('prodcats')->where('pcid',$id)->first();
+        return view ('backend.edit.editproduct',['data'=>$data,'cats'=>$cats]);
+    }
+   
+    public function delproduct($id){
+        $data = DB::table('products')->where('pcid',$id)->delete();
+        return redirect()->back()->with('message','Data deleted successfully');
     }
 }
 

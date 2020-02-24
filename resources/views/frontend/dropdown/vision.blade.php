@@ -34,63 +34,37 @@
 
 
 
-<section><!--Aboutus-->
-    <div class="container">
-      <div class="container" id="char">
-        <div class="inner_section">
-      <div class="row">      
-          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right">
-          <img src="{{url('public/contents')}}/{{$about->image}}" class="img-circle delay-03s animated wow zoomIn" alt="">
-          </div>
-            <div class=" ol-lg-7 col-md-7 col-sm-7 col-xs-12 pull-left">
-            <div class="delay-01s animated fadeInDown wow animated">
 
         
-              <h6>Why Choose us</h6>   
-              <br> 
               
-              <div class="col-lg-3">
-                <div class="service_block">
-                <div class="service_icon delay-03s animated wow zoomIn"> <span><i class="fa fa-android"></i></span> </div>
-                </div>
-              </div>
-              <h3>TRACK RECORD</h3>
-              <p>10 years track record; multi-industry.</p></i> 
-              <br><br><br>
+              <section ><!--Aboutus-->
+                <br><br><br>
+                <div class="inner_wrapper" id="aboutUs">
+                 <div class="container">
+                  <div class="container" id="char">
+                    <div class="inner_section">
+                  <div class="row">
+                    
+                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right">
+                      <img src="{{url('public/contents')}}/{{$about->image}}" class="img-circle delay-03s animated wow zoomIn" alt="">
+                      </div>
+                
+                        <div class=" ol-lg-7 col-md-7 col-sm-7 col-xs-12 pull-left">
+                        <div class="delay-01s animated fadeInDown wow animated">
+                      
+                          <h3>{{$about->title}}</h3><br/>     
+                           <p> {!!$about->description!!}</p>
+                      
+                
+                        
+                      </div>
+                    
+                    </div>
+                    </div>
+                  </div> 
+                  </div>
+                  <br><br><br>
               
-              <div class="col-lg-3">
-                <div class="service_block">
-                <div class="service_icon delay-03s animated wow zoomIn"> <span><i class="fa fa-android"></i></span> </div>
-                </div>
-              </div>
-              <h3>TECHNICAL SUPPORT</h3>
-              <p>Helpdesk, IT professionals & business consultants are just a chat away.</p>
-              <br><Br><br>
-
-              <div class="col-lg-3">
-                <div class="service_block">
-                <div class="service_icon delay-03s animated wow zoomIn"> <span><i class="fa fa-android"></i></span> </div>
-                </div>
-              </div>
-              <h3>EXPANDABLE AND SCALABLE SYSTEMS</h3>
-              <p>Integrate with our other systems; expand the system as your business grows.</p> 
-              <br><br><br>
-
-              <div class="col-lg-3">
-                <div class="service_block">
-                <div class="service_icon delay-03s animated wow zoomIn"> <span><i class="fa fa-android"></i></span> </div>
-                </div>
-              </div>
-              <h3>EASY TO USE AND RELIABLE</h3>
-              <p>Easy to understand. Reliability of information are verifiable through audit trails and supporting details.</p>  
-
-         </div>
-            
-          </div>
-        
-        </div>
-        </div>
-      </div>
   </section>  
   <!--Aboutus-->
 

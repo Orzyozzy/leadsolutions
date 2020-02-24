@@ -89,6 +89,18 @@
             </ul>
             </li>
 
+            
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-files-o"></i>
+                <span>Modals</span>
+             </a>
+              <ul class="treeview-menu">
+                <li><a href="{{url('all-services')}}"><i class="fa fa-circle-o text-info"></i> Modal Categories</a></li>   
+            </ul>
+            </li>
+
+
 
             <li><a href="{{url('admin/categories')}}"><i class="fa fa-circle-o text-info"></i> Categories</a></li>
 

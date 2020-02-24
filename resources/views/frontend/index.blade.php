@@ -57,19 +57,15 @@
       
 	    <div id="main-nav" class="collapse navbar-collapse navStyle">
 			<ul class="nav navbar-nav" id="mainNav">
-
-        <li class="active"><a href="#hero_section-1" class="scroll-link">Home</a></li>
-      
-        <div class="dropdown">
-          <li class="text-uppercase"><a href="#aboutus" class="scroll-link">about</a></li>
-          <div class="dropdown-content">
-           <a href="{{url('Learnmore')}}">Vision & Mission</a>
-            <a href="{{url(('Learnmore/Missionvision/Corporateprofile'))}}">Corporate Profile</a>
-            </div>
+        <li class="active"><a href="#hero_section-1" class="scroll-link">Home</a></li>    
+          <div class="dropdown">
+            <li class="text-uppercase"><a href="#aboutus" class="scroll-link">about</a></li>
+            <div class="dropdown-content">
+            <a href="{{url('Learnmore')}}">About Us</a>
+              <a href="{{url(('Learnmore/Missionvision/Corporateprofile'))}}">Corporate Profile</a>
+              </div>
         </div>
-         
-      
- 
+
       @foreach($cats as $cat)
       <li class="text-uppercase"><a href="#{{$cat->slug}}" class="scroll-link">{{$cat->title}}</a></li>
       @endforeach
@@ -78,7 +74,7 @@
         <li class="text-uppercase"><a href="#contact" class="scroll-link">contact</a></li>
         <div class="dropdown-content">
         <a href="{{url('contact')}}">Contact Us</a>
-          <a href="https://www.google.com">Demo</a>
+        <a href="{{url('demo')}}">Demo</a>
           </div>
 </ul>
         <div id="mySidenav" class="sidenav">
@@ -101,36 +97,7 @@
 
 
 <section id="hero_section-1" class="top_cont_outer">
-{{-- <!--Hero_Section-->
-  
 
-  {{-- <div class="hero_wrapper">
-    <div class="container">
-      <div class="hero_section-1">
-        <div class="row">
-          <div class="col-lg-5 col-sm-7">
-            <div class="top_left_cont zoomIn wow animated "> 
-              
-              <h4>LEADSolution,Inc</h4>
-              <p>A premiere developer of business software packages and provider of consultancy services, more than 10 years of experience expertise founded on long years of experience in
-                wide latitutude of experience across industries</p>
-              <p></p>
-              <a href="#products" class="read_more2">View Products</a>
-              <br>
-              <a href="#products" class="read_more2">View Products</a>
-             </div>
-            
-          </div>
-          <div class="col-lg-7 col-sm-5">
-		<div class="w3-content w3-section" style="max-width:500px" >
-        <img class="mySlides w3-animate-zoom" src="{{url('public/frontend/img/products/accountingsystem.png')}}" style="width:100%" alt="Accounting System">
-        <img class="mySlides w3-animate-zoom" src="{{url('public/frontend/img/products/inventory.png')}}" style="width:100%">
-        <img class="mySlides w3-animate-zoom" src="{{url('public/frontend/img/products/business.png')}}" style="width:100%">
-   </div>
-		  </div>
-        </div>
-      </div> 
-    </div>  --}}
 
 <div class="slideshow-container">
   
@@ -143,7 +110,7 @@
       <h4 class="text-uppercase">{{$carousel1->title}}</h4>
       <p>{!!$carousel1->description!!}</p>
         <p></p>
-      <a href="#{{$product->slug}}" class="read_more2">View Products</a>
+      <a href="#{{$product->slug}}" class="read_more2">View All Products</a>
       </div>
       </div>
   </div>
@@ -158,7 +125,7 @@
         <h4 class="text-uppercase">{{$carousel2->title}}</h4>
         <p>{!!$carousel2->description!!}</p>
           <p></p>
-        <a href="#{{$product->slug}}" class="read_more2">View Products</a>
+        <a href="#{{$product->slug}}" class="read_more2">View All Products</a>
         </div>
         </div>
     </div>
@@ -172,7 +139,7 @@
         <h4 class="text-uppercase">{{$carousel3->title}}</h4>
         <p>{!!$carousel3->description!!}</p>
           <p></p>
-        <a href="#{{$product->slug}}" class="read_more2">View Products</a>
+        <a href="#{{$product->slug}}" class="read_more2">View All Products</a>
         </div>
         </div>
     </div>
@@ -186,7 +153,7 @@
         <h4 class="text-uppercase">{{$carousel4->title}}</h4>
         <p>{!!$carousel4->description!!}</p>
           <p></p>
-        <a href="#{{$product->slug}}" class="read_more2">View Products</a>
+        <a href="#{{$product->slug}}" class="read_more2">View All Products</a>
         </div>
         </div>
     </div>
@@ -200,7 +167,7 @@
         <h4 class="text-uppercase">{{$carousel5->title}}</h4>
         <p>{!!$carousel5->description!!}</p>
           <p></p>
-        <a href="#{{$product->slug}}" class="read_more2">View Products</a>
+        <a href="#{{$product->slug}}" class="read_more2">View All Products</a>
         </div>
         </div>
     </div>
@@ -214,14 +181,14 @@
         <h4 class="text-uppercase">{{$carousel6->title}}</h4>
         <p>{!!$carousel6->description!!}</p>
           <p></p>
-        <a href="#{{$product->slug}}" class="read_more2">View Products</a>
+        <a href="#{{$product->slug}}" class="read_more2">View All Products</a>
         </div>
         </div>
     </div>
  
   
  
-    
+  
   <a class="prev" onclick="plusSlides(-1)">❮</a>
   <a class="next" onclick="plusSlides(1)">❯</a>
 
@@ -269,7 +236,7 @@
           <div class="col-lg-5 col-sm-7">
             <div class="top_left_carousel zoomIn wow animated"> 
               <div class="container"  id="char">
-                <h2>ABOUT US</h2>
+                <h2>Why us?</h2>
               </div>
             </div>
           </div>
@@ -296,18 +263,43 @@
       	<div class=" ol-lg-7 col-md-7 col-sm-7 col-xs-12 pull-left">
         <div class="delay-01s animated fadeInDown wow animated">
       
-          <h3>{{$about->title}}</h3><br/>     
-           <p> {!!$about->description!!}</p>
-      
-			{{-- <h3>Corporate Profile</h3><br/> 
-      <p>LEADSolutions, Inc. is a corporation created under the Philippine Law. We specialize in the development of business software packages. ”</p> <br/>
-      <p>Our affiliate, the LEADSolutions Consultancy, Inc., another domestic corporation, provides professional, training and consultancy services.</p><br/>
-      <P>Our team is composed of business consultants, professional accountants and programmers with collective knowledge in finance, accounting, business processes, control systems, internal quality audit, ISO accreditation, taxation, trainings, IT audit, internal financial audit, and controllership.</p><br/>
-      <p>The synergy of our complimentary expertise in various fields and discipline enables us to provide holistic and cost-efficient approaches to improving our client’s internal processes; a guarantee that the software packages we developed can cater the information needs at various levels of management and operations.</p>  
-      --}} </div>
-<div class="work_bottom"><a href="Vision-and-mission" class="contact_btn">Know More...</a> </div>       
-	   </div>
-      	
+          <h6>Why Choose us?</h6>   
+          <br> 
+          
+          <div class="col-lg-3">
+            <div class="service_block">
+            <div class="service_icon delay-03s animated wow zoomIn"> <span><i class="fa fa-android"></i></span> </div>
+            </div>
+          </div>
+          <h3>TRACK RECORD</h3>
+          <p>10 years track record; multi-industry.</p></i> 
+          <br><br><br>
+          
+          <div class="col-lg-3">
+            <div class="service_block">
+            <div class="service_icon delay-03s animated wow zoomIn"> <span><i class="fa fa-android"></i></span> </div>
+            </div>
+          </div>
+          <h3>TECHNICAL SUPPORT</h3>
+          <p>Helpdesk, IT professionals & business consultants are just a chat away.</p>
+          <br><Br><br>
+
+          <div class="col-lg-3">
+            <div class="service_block">
+            <div class="service_icon delay-03s animated wow zoomIn"> <span><i class="fa fa-android"></i></span> </div>
+            </div>
+          </div>
+          <h3>EXPANDABLE AND SCALABLE SYSTEMS</h3>
+          <p>Integrate with our other systems; expand the system as your business grows.</p> 
+          <br><br><br>
+
+          <div class="col-lg-3">
+            <div class="service_block">
+            <div class="service_icon delay-03s animated wow zoomIn"> <span><i class="fa fa-android"></i></span> </div>
+            </div>
+          </div>
+          <h3>EASY TO USE AND RELIABLE</h3>
+          <p>Easy to understand. Reliability of information are verifiable through audit trails and supporting details.</p>  
       </div>
 	  
     </div>
@@ -316,6 +308,7 @@
   </div>
   <br><br><br>
 </section>
+
 <!--Aboutus--> 
 
 <!--Service-->
@@ -345,23 +338,45 @@
   <div class="container" id="char">
     <div class="service_wrapper" >
       <div class="row">
-
         @foreach ($services as $service)
         <div class="col-lg-4">
           <div class="service_block">
-          <div class="service_icon delay-03s animated wow zoomIn"> <span><i class="fa fa-{{$service->icon}}"></i></span> </div>
-            <h4 class="animated fadeInUp wow">{{$service->title}}</h4>
-            <p class="animated fadeInDown wow">{!!$service->description!!}</p>
+          <div class="delay-03s animated wow zoomIn">
+            <button class="service_icon" onclick="document.getElementById('{{$service->slug}}').style.display='block'" class="w3-circle w3-deep-orange" >
+            <span><i class="fa fa-{{$service->icon}}"></span></i></button>   
+                     </div>
+            <h4 class="animated fadeInUp wow">{{$service->title}}</h4>  
           </div>
         </div>
+        
         @endforeach
-
       </div>
     </div>
   </div>
 </section>
 
+@foreach ($services as $service)
+<div id="{{$service->slug}}" class="w3-modal">
+  <div class="w3-modal-content">
+    <header class="w3-container w3-teal" > 
+      <span onclick="document.getElementById('{{$service->slug}}').style.display='none'" 
+      class="w3-button w3-display-topright">&times;</span>
+      <div id="modals">
+      <h4>{{$service->title}}</h4>
+      </div>
+    </header>
+    <div class="container">
+      <div class="col-lg-8" id="modals">
+    <p class="animated fadeInDown wow">{!!$service->description!!}</p>
+      </div>
+    </div>
 
+    <footer class="w3-container w3-teal">
+      <p>LEADSolutions</p>
+    </footer>
+  </div>
+</div>
+@endforeach
 <!--Service-->
 
 
@@ -422,7 +437,7 @@
      </div>
     <div class="item_overlay">
      <div class="item_info"> 
-      <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-deep-orange" style="height:50%">View Product</button>
+      <button onclick="document.getElementById('{{$prod->slug}}').style.display='block'" class="w3-button w3-deep-orange" style="height:50%">View Product</button>
        <h6 class="project_name">{{$prod->title}}</h6>
      </div>
    </div>
@@ -452,25 +467,31 @@
   
 </section>
 
-<div id="id01" class="w3-modal">
+@foreach ($product as $prod)
+<div id="{{$prod->slug}}" class="w3-modal">
   <div class="w3-modal-content">
-    <header class="w3-container w3-teal"> 
-      <span onclick="document.getElementById('id01').style.display='none'" 
+    <header class="w3-container w3-teal" > 
+      <span onclick="document.getElementById('{{$prod->slug}}').style.display='none'" 
       class="w3-button w3-display-topright">&times;</span>
-      <h2>Modal Header</h2>
+      <div id="modals">
+      <h4>{!!$prod->title!!}</h4>
+      </div>
     </header>
-    <div class="w3-container">
-      <p>S12312312321</p>
-      <p>Some text..</p>
+    <div class="container">
+      <div class="col-lg-8" id="modals">
+    <p class="animated fadeInDown wow">{!!$prod->description!!}</p>
+      </div>
     </div>
+
     <footer class="w3-container w3-teal">
-      <p>Modal Footer</p>
+      <p>LEADSolutions</p>
     </footer>
   </div>
 </div>
-</div>
+@endforeach
 
-<!--/Portfolio --> 
+
+
 
 {{-- <section class="page_section abouthis" id="clients"><!--page_section-->
   <h2>Clients</h2>
@@ -500,8 +521,10 @@
         <img src="{{url('public/teams')}}/{{$team->image}}" alt="">
 
           <ul>
-            <a href="#" class="read_more2">FULL BIO</a>
+            <a class="read_more2" onclick="document.getElementById('{{$team->name}}').style.display='block'">FULL BIO</a>
           </ul>
+
+         
         </div>
       <h3 class="wow fadeInDown delay-03s">{{$team->name}}</h3>
       <span class="wow fadeInDown delay-03s">{{$team->designation}}</span>
@@ -513,6 +536,29 @@
     </div>
   </div>
 </section>
+
+@foreach ($teams as $team)
+<div id="{{$team->name}}" class="w3-modal">
+  <div class="w3-modal-content">
+    <header class="w3-container w3-teal" > 
+      <span onclick="document.getElementById('{{$team->name}}').style.display='none'" 
+      class="w3-button w3-display-topright">&times;</span>
+      <div id="modals">
+      <h4>{!!$team->name!!}</h4>
+      </div>
+    </header>
+    <div class="container">
+      <div class="col-lg-8" id="modals">
+    <p class="animated fadeInDown wow">{!!$team->description!!}</p>
+      </div>
+    </div>
+
+    <footer class="w3-container w3-teal">
+      <p>LEADSolutions</p>
+    </footer>
+  </div>
+</div>
+@endforeach
 <!--/Team-->
 
 <!--Footer-->

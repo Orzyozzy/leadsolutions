@@ -45,8 +45,8 @@
                             @endif
                         </td>
                         <td>{{$prod->status}}</td>
-                        <td><a href="{{('editPost')}}/{{$prod->pid}}" class="btn btn-sm btn-success"><i class="fa fa-edit"></i></a>
-                            <a href="{{url('deletePost')}}/{{$prod->pid}}" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
+                        <td><a href="{{('editproduct')}}/{{$prod->pid}}" class="btn btn-sm btn-success"><i class="fa fa-edit"></i></a>
+                            <a href="{{url('delproduct')}}/{{$prod->pid}}" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
                     </tr>
                     @endforeach
                 </tbody>

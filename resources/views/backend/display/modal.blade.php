@@ -27,7 +27,6 @@
                     <tr>
                         <th>SN</th>
                         <th>Title</th>
-                        <th>Category</th>
                         <th>Icons</th>
                         <th>Status</th>
                         <th>Action</th>

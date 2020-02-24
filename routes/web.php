@@ -21,6 +21,11 @@ Route::get('/Learnmore/Missionvision/Corporateprofile', 'frontController@corpora
 
 Route::get('/contact','frontController@contacts');
 
+Route::get('/demo','frontController@demos');
+
+
+
+
 
 
 
@@ -28,7 +33,12 @@ Route::get('/contact','frontController@contacts');
 
 
 //Route Admin Dashboard//
-Route::get('admin','adminController@admin');
+
+
+
+
+
+Route::get('/admin','adminController@admin');
 
 Route::get('admin/setup', 'adminController@setups');
 
@@ -48,6 +58,10 @@ Route::get('deleteService/{id}','adminController@deleteService');
 Route::get('deleteCategory/{id}','adminController@deleteCategory');
 
 Route::get('editCategory/{id}','adminController@editCategory');
+
+Route::get('editproduct/{id}','adminController@editProduct');
+
+Route::get('delproduct/{id}','adminController@delProduct');
 
 //New//
 Route::get('new-post','adminController@newPost');
@@ -81,6 +95,8 @@ Route::post('addCategory', 'crudController@insertData');
 
 Route::post('updatePost/{id}','crudController@updateData');
 
+Route::post('updateProduct/{id}','crudController@updateData');
+
 
 
 //all posts//
@@ -94,7 +110,6 @@ Route::get('all-product','adminController@allproduct');
 
 Route::get('all-members', 'adminController@allmembers');
 
-
-
+Route::get('all-modals','adminController@allmodals');
 
 // you missed it. You must have send the url request to the controller first. :-) Okay! you can carry on from there. :-)

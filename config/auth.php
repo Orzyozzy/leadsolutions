@@ -18,6 +18,7 @@ return [
         'passwords' => 'users',
     ],
 
+
     /*
     |--------------------------------------------------------------------------
     | Authentication Guards
@@ -46,6 +47,8 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+
+       
     ],
 
     /*
@@ -70,6 +73,8 @@ return [
             'driver' => 'eloquent',
             'model' => App\User::class,
         ],
+
+       
 
         // 'users' => [
         //     'driver' => 'database',
@@ -99,6 +104,8 @@ return [
             'expire' => 60,
             'throttle' => 60,
         ],
+
+      
     ],
 
     /*

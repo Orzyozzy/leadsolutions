@@ -40,13 +40,18 @@
 		  	<div class="form-group">
 		  		<label>Intro</label>
 		  		<textarea name="intro" class="form-control" rows="10"></textarea>
-              </div>
+			  </div>
+			  
+			  <div class="form-group">
+				<label>Bio Description</label>
+				<textarea name="description" class="form-control" rows="10"></textarea>
+					</div>
               <div class="form-group">
                 <input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
               <p><label for="file" style="cursor: pointer;">Profile Image</label></p>
               <p><img id="output" width="200" /></p>
             </div>
-             
+{{--              
             <div class="form-group">
                 <label>Social Profile Links</label>
             </div>
@@ -55,7 +60,7 @@
                     <input type="text" name="social[]" class="form-control">
                     <a href="#" class="btn btn-warning addField"><i class="fa fa-plus"></i></a>
                 </div>
-          </div>
+          </div> --}}
           <div class="alert alert-danger" id="socialError">
               <strong>Sorry!</strong> You've already reached the maximum number of fields for social profile links.
           </div>
@@ -101,7 +106,9 @@ $('.addField').click(function(e){
 <script src="{{url('resources/views/backend/ckeditor/ckeditor.js')}}"></script>
 <script>
     CKEDITOR.replace('intro',{});
+	CKEDITOR.replace('description',{});
 </script>
+
 <style>
 	.socialField{
 		position: relative;

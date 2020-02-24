@@ -58,28 +58,22 @@
       
 	    <div id="main-nav" class="collapse navbar-collapse navStyle">
 			<ul class="nav navbar-nav" id="mainNav">
-
-        <li class="active"><a href="#hero_section-1" class="scroll-link">Home</a></li>
-      
+        <li><a href="{{url('/')}}" class="scroll-link">Home</a></li>
         <div class="dropdown">
           <li class="text-uppercase"><a href="#aboutus" class="scroll-link">about</a></li>
           <div class="dropdown-content">
             <a href="{{url('Learnmore')}}">About us</a>
-            <a href="{{url(('Learnmore/Missionvision/Corporateprofile'))}}">Corporate Profile</a>
+            <a href="{{url('Learnmore/Missionvision/Corporateprofile')}}">Corporate Profile</a>
             </div>
         </div>
-         
-      
- 
       {{-- @foreach($cats as $cat)
       <li class="text-uppercase"><a href="#{{$cat->slug}}" class="scroll-link">{{$cat->title}}</a></li>
       @endforeach --}}
-
       <div class="dropdown">
         <li class="text-uppercase"><a href="#contact" class="scroll-link">contact</a></li>
         <div class="dropdown-content">
           <a href="{{url('contact')}}">Contact Us </a>
-          <a href="https://www.google.com">Demo</a>
+        <a href="{{url('demo')}}">Demo</a>
           </div>
  </ul>
         <div id="mySidenav" class="sidenav">

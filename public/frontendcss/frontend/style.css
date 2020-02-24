@@ -2338,3 +2338,18 @@ div.sticky {
     text-align: top;
     padding-left: 50%;
   }
+
+/* modal */
+
+#modals p{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    margin-left: 10%;
+    font-family: 'Roboto', sans-serif;
+}
+
+#modals h4{
+    font-size: 30pt;
+    text-align: center;
+    font-family: 'impact', sans-serif;
+}
